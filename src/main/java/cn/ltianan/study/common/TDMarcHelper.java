@@ -3,6 +3,7 @@ package cn.ltianan.study.common;
 import cn.ltianan.study.domain.SckEntity;
 import cn.ltianan.study.domain.ZskEntity;
 import cn.ltianan.study.repository.primaryRepository.SckRepository;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Component;
@@ -29,7 +30,7 @@ public class TDMarcHelper {
     }
 
     public String getEasyMarcFromZsk(){
-        String tdMarc="";
+        String easyMarc="";
 
         Integer zskid=this.zsk.getZskid();
         String ISBN="";
@@ -68,93 +69,87 @@ public class TDMarcHelper {
 
         price=zsk.getZsktemp();
 
-        bookname=bookname.replaceAll("'","''");
-        othername=othername.replaceAll("'","''");
-//        ybfzhu=ybfzhu.replaceAll("'","''");
-        author=author.replaceAll("'","''");
-        pubplace=pubplace.replaceAll("'","''");
-        publisher=publisher.replaceAll("'","''");
-        pubdate=pubdate.replaceAll("'","''");
-        pages=pages.replaceAll("'","''");
-        measure=measure.replaceAll("'","''");
-        lagclass=lagclass.replaceAll("'","''");
-        books=books.replaceAll("'","''");
-        booksauthor=booksauthor.replaceAll("'","''");
-        endnote=endnote.replaceAll("'","''");
-        classcode=classcode.replaceAll("'","''");
-        price=price.replaceAll("'","''");
-
         //TODO 生成编目时间
         String time = df.format(this.zsk.getCatatime());//编目日期
         StringBuilder stb = new StringBuilder("01003nam0 2200289   450 0010000555932005");
         stb.append(time+"");
         //ISBN ，price 价格
-        if(!ISBN.equals("")){
-            stb.append("010  a"+ISBN+"dCNY"+price+"");
-        }else if(!price.equals("")){
-            stb.append("010  dCNY"+price+"");
+        if(StringUtils.isNotEmpty(ISBN)||StringUtils.isNotEmpty(price)){
+            stb.append("010  ");
+            if(StringUtils.isNotEmpty(ISBN)){
+                stb.append("a"+ISBN);
+            }
+            if(StringUtils.isNotEmpty(price)){
+                stb.append("d"+price);
+            }
+            stb.append("");
         }
+
         //lagclass 作品语种
-        if(!lagclass.equals("")){
+        if(StringUtils.isNotEmpty(lagclass)){
             stb.append("1010 a"+lagclass+"");
         }
         //bookname 正题名，author 作者
-        if(!bookname.equals("")||!author.equals("")||!othername.equals("")){
+        if(StringUtils.isNotEmpty(bookname)||StringUtils.isNotEmpty(author)||StringUtils.isNotEmpty(othername)){
             stb.append("2001 ");
-            if(!bookname.equals("")){
+            if(StringUtils.isNotEmpty(bookname)){
                 stb.append("a"+bookname);
             }
-            if(!othername.equals("")){
+            if(StringUtils.isNotEmpty(othername)){
                 stb.append("d"+othername);
             }
-            if(!author.equals("")){
+            if(StringUtils.isNotEmpty(author)){
                 stb.append("f"+author);
             }
             stb.append("");
         }
         //pubplace 出版地，publisher 出版社，pubdate 出版时间
-        if(!pubplace.equals("")&&!publisher.equals("")&&!pubdate.equals("")){
-            stb.append("210  a"+pubplace+"c"+publisher+"d"+pubdate+"");
-        }else if(!pubplace.equals("")&&!publisher.equals("")){
-            stb.append("210  a"+pubplace+"c"+publisher+"");
-        }else if(!pubplace.equals("")&&!pubdate.equals("")){
-            stb.append("210  a"+pubplace+"d"+pubdate+"");
-        }else if(!publisher.equals("")&&!pubdate.equals("")){
-            stb.append("210  c"+publisher+"d"+pubdate+"");
+        if(StringUtils.isNotEmpty(pubplace)||StringUtils.isNotEmpty(publisher)||StringUtils.isNotEmpty(pubdate)){
+            stb.append("210  ");
+            if(StringUtils.isNotEmpty(pubplace)){
+                stb.append("a"+pubplace);
+            }
+            if(StringUtils.isNotEmpty(publisher)){
+                stb.append("c"+publisher);
+            }
+            if(StringUtils.isNotEmpty(pubdate)){
+                stb.append("d"+pubdate);
+            }
+            stb.append("");
         }
         //pages 页码，measure 尺寸
-        if(!pages.equals("")&&!measure.equals("")){
+        if(StringUtils.isNotEmpty(pages)&&StringUtils.isNotEmpty(measure)){
             stb.append("215  a"+pages+"d"+measure+"");
-        }else if(!pages.equals("")){
+        }else if(StringUtils.isNotEmpty(pages)){
             stb.append("215  a"+pages+"");
-        }else if(!measure.equals("")){
+        }else if(StringUtils.isNotEmpty(measure)){
             stb.append("215  d"+measure+"");
         }
         //books 丛编题名; booksauthor 丛编责任说明;
-        if(!books.equals("")&&!booksauthor.equals("")){
+        if(StringUtils.isNotEmpty(books)&&StringUtils.isNotEmpty(booksauthor)){
             stb.append("225  a"+books+"f"+booksauthor+"");
-        }else if(!books.equals("")){
+        }else if(StringUtils.isNotEmpty(books)){
             stb.append("225  a"+books+"");
-        }else if(!booksauthor.equals("")){
+        }else if(StringUtils.isNotEmpty(booksauthor)){
             stb.append("225  f"+booksauthor+"");
         }
 
 //        //附注
-//        if(!ybfzhu.equals("")){
+//        if(StringUtils.isNotEmpty(ybfzhu)){
 //            stb.append("300  a"+ybfzhu+"");
 //        }
 
         //endnote 摘要;
-        if(!endnote.equals("")){
+        if(StringUtils.isNotEmpty(endnote)){
             stb.append("330  a"+endnote+"");
         }
-        if(!classcode.equals("")){
+        if(StringUtils.isNotEmpty(classcode)){
             stb.append("690  a"+classcode+"");
         }
-        if(!author.equals("")){
+        if(StringUtils.isNotEmpty(author)){
             stb.append("701 0a"+author+"");
         }
-        tdMarc=stb.toString();
-        return tdMarc;
+        easyMarc=stb.toString();
+        return easyMarc;
     }
 }

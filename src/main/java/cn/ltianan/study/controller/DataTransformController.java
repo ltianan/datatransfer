@@ -118,7 +118,12 @@ public class DataTransformController {
 			List<SckEntity> scks = sckRepository.findByZskid(zsk.getZskid());
 			System.out.println("zskid for query scks:"+zsk.getZskid());
 			if(scks!=null&&scks.size()>0){
-				zsk.setZsktemp(scks.get(0).getPrice().toString());//临时将价格传入这里，这个字段没用到
+				if(scks.get(0).getPrice()!=null){
+					zsk.setZsktemp(scks.get(0).getPrice().toString());//临时将价格传入这里，这个字段没用到
+				}else{
+					zsk.setZsktemp("0.00");
+				}
+
 			}else{
 				zsk.setZsktemp("0.00");
 			}
@@ -225,7 +230,7 @@ public class DataTransformController {
 			book.setIndexId(b.getZskid());
 //			book.getBookId()
 			book.setBookMediaType("纸张");
-			if(b.getPrice().compareTo(BigDecimal.valueOf(100000))>0){
+			if(b.getPrice()==null||b.getPrice().compareTo(BigDecimal.valueOf(100000))>0){
 				book.setBookPrice(BigDecimal.ZERO);
 				book.setBookSetPrice(BigDecimal.ZERO);
 			}else{
@@ -246,9 +251,14 @@ public class DataTransformController {
 //			book.setUpdateBy("admin");
 //			book.setUpdateTime(b.getOpertime());
 			book.setNowDeptId(100);
-			book.setNowLocalId(booklocalMaps.get(b.getBookplace()));
 			book.setOriDeptId(100);
-			book.setOriLocalId(booklocalMaps.get(b.getBookplace()));
+			if(booklocalMaps.size()==1){//如果没有插入新的藏址，直接在这里配置
+				book.setNowLocalId(1);
+				book.setOriLocalId(1);
+			}else{
+				book.setNowLocalId(booklocalMaps.get(b.getBookplace()));
+				book.setOriLocalId(booklocalMaps.get(b.getBookplace()));
+			}
 			bookRepository.save(book);
 		}
 		finish=true;
@@ -294,9 +304,9 @@ public class DataTransformController {
 		readerUnitEntity.setDeptId(deptId);
 		readerUnitEntity.setNano(null);
 		readerUnitEntity.setReaderTypeId(1);//默认1
-		readerUnitEntity.setReaderUnitCode(deptId+"番禺中医院");
+		readerUnitEntity.setReaderUnitCode(deptId+"本院职工");
 		readerUnitEntity.setReaderUnitId(1);
-		readerUnitEntity.setReaderUnitName("番禺中医院");
+		readerUnitEntity.setReaderUnitName("本院职工");
 		readerUnitEntity.setStatus("0");
 		cirReaderUnitRepository.save(readerUnitEntity);
 		return true;
