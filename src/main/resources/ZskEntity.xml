@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.ZskEntity">
+        <table name="ZSK" schema="dbo"/>
+        <attributes>
+            <id name="zskid">
+                <column name="zskid" precision="-1"/>
+            </id>
+            <basic name="cataman">
+                <column name="cataman" nullable="false" length="20"/>
+            </basic>
+            <basic name="catatime">
+                <column name="catatime" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="bookname">
+                <column name="bookname" nullable="false" length="500"/>
+            </basic>
+            <basic name="othername">
+                <column name="othername" nullable="false" length="300"/>
+            </basic>
+            <basic name="funame">
+                <column name="funame" nullable="false" length="300"/>
+            </basic>
+            <basic name="author">
+                <column name="author" nullable="false" length="200"/>
+            </basic>
+            <basic name="edition">
+                <column name="edition" nullable="false" length="20"/>
+            </basic>
+            <basic name="isbn">
+                <column name="ISBN" nullable="false" length="17"/>
+            </basic>
+            <basic name="pubplace">
+                <column name="pubplace" nullable="false" length="50"/>
+            </basic>
+            <basic name="publisher">
+                <column name="publisher" nullable="false" length="50"/>
+            </basic>
+            <basic name="pubdate">
+                <column name="pubdate" nullable="false" length="10"/>
+            </basic>
+            <basic name="pages">
+                <column name="pages" nullable="false" length="50"/>
+            </basic>
+            <basic name="appendix">
+                <column name="appendix" nullable="false" length="50"/>
+            </basic>
+            <basic name="classcode">
+                <column name="classcode" nullable="false" length="20"/>
+            </basic>
+            <basic name="authorcode">
+                <column name="authorcode" nullable="false" length="10"/>
+            </basic>
+            <basic name="books">
+                <column name="books" nullable="false" length="200"/>
+            </basic>
+            <basic name="booksauthor">
+                <column name="booksauthor" nullable="false" length="50"/>
+            </basic>
+            <basic name="endnote">
+                <column name="endnote" nullable="false" length="500"/>
+            </basic>
+            <basic name="docclass">
+                <column name="docclass" nullable="false" length="20"/>
+            </basic>
+            <basic name="measure">
+                <column name="measure" nullable="false" length="20"/>
+            </basic>
+            <basic name="bookcount">
+                <column name="bookcount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="zch">
+                <column name="zch" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="zdfs">
+                <column name="zdfs" nullable="false" length="10"/>
+            </basic>
+            <basic name="ztc">
+                <column name="ztc" nullable="false" length="61"/>
+            </basic>
+            <basic name="lagclass">
+                <column name="lagclass" nullable="false" length="10"/>
+            </basic>
+            <basic name="marc">
+                <column name="marc" nullable="false"/>
+            </basic>
+            <basic name="fzqfh">
+                <column name="fzqfh" length="20"/>
+            </basic>
+            <basic name="cbbh">
+                <column name="cbbh" nullable="false" length="20"/>
+            </basic>
+            <basic name="tubiao">
+                <column name="tubiao" nullable="false" length="50"/>
+            </basic>
+            <basic name="yuedu">
+                <column name="yuedu" nullable="false" length="20"/>
+            </basic>
+            <basic name="laiyuan">
+                <column name="laiyuan" nullable="false" length="20"/>
+            </basic>
+            <basic name="zsktemp">
+                <column name="zsktemp" nullable="false" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

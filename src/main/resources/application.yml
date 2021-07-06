@@ -1,0 +1,30 @@
+#source
+spring:
+  primary:
+    datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=libdata_2017
+      username: sa
+      password: sa1
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  secondary:
+    datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:postgresql://127.0.0.1:5432/pyzyy
+      username: postgres
+      password: 1
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: true
+
+    
+server:
+  # 服务端口
+  port: 6888

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.LtDzheinfoEntity">
+        <table name="lt_dzheinfo" schema="public" catalog="sjlibold"/>
+        <attributes>
+            <id name="dzid">
+                <column name="dzid" length="32"/>
+            </id>
+            <basic name="dzzhao">
+                <column name="dzzhao" length="60"/>
+            </basic>
+            <basic name="xming">
+                <column name="xming" length="30"/>
+            </basic>
+            <basic name="ztai">
+                <column name="ztai" length="40"/>
+            </basic>
+            <basic name="mima">
+                <column name="mima" length="30"/>
+            </basic>
+            <basic name="zjlx">
+                <column name="zjlx" nullable="false" length="10"/>
+            </basic>
+            <basic name="zjhma">
+                <column name="zjhma" nullable="false" length="60"/>
+            </basic>
+            <basic name="jzrqi">
+                <column name="jzrqi" precision="-1"/>
+            </basic>
+            <basic name="qyrqi">
+                <column name="qyrqi" precision="-1"/>
+            </basic>
+            <basic name="bzrqi">
+                <column name="bzrqi" precision="-1"/>
+            </basic>
+            <basic name="zhuanye">
+                <column name="zhuanye" nullable="false" length="10"/>
+            </basic>
+            <basic name="zhiwu">
+                <column name="zhiwu" nullable="false" length="100"/>
+            </basic>
+            <basic name="zcheng">
+                <column name="zcheng" nullable="false" length="100"/>
+            </basic>
+            <basic name="xueli">
+                <column name="xueli" nullable="false" length="100"/>
+            </basic>
+            <basic name="minzu">
+                <column name="minzu" nullable="false" length="100"/>
+            </basic>
+            <basic name="csrqi">
+                <column name="csrqi" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="xingbie">
+                <column name="xingbie" precision="-1"/>
+            </basic>
+            <basic name="shouji">
+                <column name="shouji" nullable="false" length="30"/>
+            </basic>
+            <basic name="dianhua">
+                <column name="dianhua" nullable="false" length="30"/>
+            </basic>
+            <basic name="dizhi">
+                <column name="dizhi" nullable="false" length="100"/>
+            </basic>
+            <basic name="youbian">
+                <column name="youbian" nullable="false" length="100"/>
+            </basic>
+            <basic name="dzyjian">
+                <column name="dzyjian" nullable="false" length="100"/>
+            </basic>
+            <basic name="jiguan">
+                <column name="jiguan" nullable="false" length="30"/>
+            </basic>
+            <basic name="xingqu">
+                <column name="xingqu" nullable="false" length="100"/>
+            </basic>
+            <basic name="jifen">
+                <column name="jifen" precision="-1"/>
+            </basic>
+            <basic name="jycshu">
+                <column name="jycshu" precision="-1"/>
+            </basic>
+            <basic name="yycshu">
+                <column name="yycshu" precision="-1"/>
+            </basic>
+            <basic name="xjcshu">
+                <column name="xjcshu" precision="-1"/>
+            </basic>
+            <basic name="wzcshu">
+                <column name="wzcshu" precision="-1"/>
+            </basic>
+            <basic name="gjhjcshu">
+                <column name="gjhjcshu" precision="-1"/>
+            </basic>
+            <basic name="qkuan">
+                <column name="qkuan" precision="2"/>
+            </basic>
+            <basic name="yajin">
+                <column name="yajin" precision="2"/>
+            </basic>
+            <basic name="optime">
+                <column name="optime" precision="-1"/>
+            </basic>
+            <basic name="zpian">
+                <column name="zpian" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="zhiye">
+                <column name="zhiye" nullable="false" length="10"/>
+            </basic>
+            <basic name="ztstartdate">
+                <column name="ztstartdate" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="ztenddate">
+                <column name="ztenddate" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="dzdw">
+                <column name="dzdw" nullable="false" length="100"/>
+            </basic>
+            <basic name="beizhu">
+                <column name="beizhu" nullable="false" length="250"/>
+            </basic>
+            <basic name="openid">
+                <column name="openid" nullable="false" length="32"/>
+            </basic>
+            <basic name="zpianyshi">
+                <column name="zpianyshi" nullable="false"/>
+            </basic>
+            <basic name="xjh">
+                <column name="xjh" nullable="false" length="100"/>
+            </basic>
+            <basic name="xueduan">
+                <column name="xueduan" nullable="false" length="100"/>
+            </basic>
+            <basic name="ban">
+                <column name="ban" nullable="false" length="100"/>
+            </basic>
+            <basic name="ji">
+                <column name="ji" nullable="false" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

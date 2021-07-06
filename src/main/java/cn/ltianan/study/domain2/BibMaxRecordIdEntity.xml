@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain2.BibMaxRecordIdEntity">
+        <table name="bib_max_record_id" schema="public"/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="-1"/>
+            </id>
+            <basic name="deptId">
+                <column name="dept_id" precision="-1"/>
+            </basic>
+            <basic name="maxRecordId">
+                <column name="max_record_id" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

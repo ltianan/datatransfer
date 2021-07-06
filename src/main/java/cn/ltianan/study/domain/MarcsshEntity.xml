@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.MarcsshEntity">
+        <table name="marcssh" schema="public" catalog="sjlibold"/>
+        <attributes>
+            <id name="sshid">
+                <column name="sshid" length="32"/>
+            </id>
+            <basic name="marcid">
+                <column name="marcid" length="32"/>
+            </basic>
+            <basic name="sshao">
+                <column name="sshao" length="100"/>
+            </basic>
+            <basic name="zchao">
+                <column name="zchao" nullable="false" length="100"/>
+            </basic>
+            <basic name="zzhao">
+                <column name="zzhao" nullable="false" length="100"/>
+            </basic>
+            <basic name="leixing">
+                <column name="leixing" length="10"/>
+            </basic>
+            <basic name="flhao">
+                <column name="flhao" nullable="false" length="100"/>
+            </basic>
+            <basic name="zch">
+                <column name="zch" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

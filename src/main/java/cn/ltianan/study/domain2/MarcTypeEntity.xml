@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain2.MarcTypeEntity">
+        <table name="marc_type" schema="public"/>
+        <attributes>
+            <id name="marcTypeId">
+                <column name="marc_type_id" precision="-1"/>
+            </id>
+            <basic name="typeName">
+                <column name="type_name" length="60"/>
+            </basic>
+            <basic name="attachment">
+                <column name="attachment" nullable="false" length="4"/>
+            </basic>
+            <basic name="author">
+                <column name="author" length="4"/>
+            </basic>
+            <basic name="booksize">
+                <column name="booksize" nullable="false" length="4"/>
+            </basic>
+            <basic name="classno">
+                <column name="classno" nullable="false" length="4"/>
+            </basic>
+            <basic name="doctype">
+                <column name="doctype" nullable="false" length="4"/>
+            </basic>
+            <basic name="isbn">
+                <column name="isbn" length="4"/>
+            </basic>
+            <basic name="issn">
+                <column name="issn" nullable="false" length="4"/>
+            </basic>
+            <basic name="language">
+                <column name="language" nullable="false" length="4"/>
+            </basic>
+            <basic name="orderno">
+                <column name="orderno" nullable="false" length="4"/>
+            </basic>
+            <basic name="page">
+                <column name="page" nullable="false" length="4"/>
+            </basic>
+            <basic name="price">
+                <column name="price" nullable="false" length="4"/>
+            </basic>
+            <basic name="pubdate">
+                <column name="pubdate" nullable="false" length="4"/>
+            </basic>
+            <basic name="publisher">
+                <column name="publisher" length="4"/>
+            </basic>
+            <basic name="pubplace">
+                <column name="pubplace" nullable="false" length="4"/>
+            </basic>
+            <basic name="seriesTitle">
+                <column name="series_title" nullable="false" length="4"/>
+            </basic>
+            <basic name="seriesAuthor">
+                <column name="series_author" nullable="false" length="4"/>
+            </basic>
+            <basic name="title">
+                <column name="title" length="4"/>
+            </basic>
+            <basic name="parallelTitle">
+                <column name="parallel_title" nullable="false" length="4"/>
+            </basic>
+            <basic name="subtitle">
+                <column name="subtitle" nullable="false" length="4"/>
+            </basic>
+            <basic name="sectionName">
+                <column name="section_name" nullable="false" length="4"/>
+            </basic>
+            <basic name="sectionNo">
+                <column name="section_no" nullable="false" length="4"/>
+            </basic>
+            <basic name="upno">
+                <column name="upno" nullable="false" length="4"/>
+            </basic>
+            <basic name="edition">
+                <column name="edition" nullable="false" length="4"/>
+            </basic>
+            <basic name="subject">
+                <column name="subject" nullable="false" length="4"/>
+            </basic>
+            <basic name="summary">
+                <column name="summary" nullable="false" length="4"/>
+            </basic>
+            <basic name="frequency">
+                <column name="frequency" nullable="false" length="4"/>
+            </basic>
+            <basic name="withnote">
+                <column name="withnote" nullable="false" length="4"/>
+            </basic>
+            <basic name="createBy">
+                <column name="create_by" nullable="false" length="64"/>
+            </basic>
+            <basic name="createTime">
+                <column name="create_time" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="updateBy">
+                <column name="update_by" nullable="false" length="64"/>
+            </basic>
+            <basic name="updateTime">
+                <column name="update_time" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="remark">
+                <column name="remark" nullable="false" length="500"/>
+            </basic>
+            <basic name="otherAuthor">
+                <column name="other_author" nullable="false" length="4"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

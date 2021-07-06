@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.SckEntity">
+        <table name="SCK" schema="dbo"/>
+        <attributes>
+            <id name="barcode">
+                <column name="barcode" length="20"/>
+            </id>
+            <basic name="zskid">
+                <column name="zskid" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="sckid">
+                <column name="sckid" precision="-1"/>
+            </basic>
+            <basic name="rollcode">
+                <column name="rollcode" nullable="false" length="50"/>
+            </basic>
+            <basic name="bookplace">
+                <column name="bookplace" nullable="false" length="50"/>
+            </basic>
+            <basic name="price">
+                <column name="price" nullable="false" precision="2"/>
+            </basic>
+            <basic name="borrowstatus">
+                <column name="borrowstatus" precision="-1"/>
+            </basic>
+            <basic name="bookstatus">
+                <column name="bookstatus" nullable="false" length="10"/>
+            </basic>
+            <basic name="operator">
+                <column name="operator" length="20"/>
+            </basic>
+            <basic name="opertime">
+                <column name="opertime" precision="-1"/>
+            </basic>
+            <basic name="cePrice">
+                <column name="cePrice" nullable="false" length="20"/>
+            </basic>
+            <basic name="ceHblx">
+                <column name="ceHBLX" nullable="false" length="20"/>
+            </basic>
+            <basic name="batchCode">
+                <column name="BatchCode" nullable="false" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.NlcbibEntity">
+        <table name="nlcbib" schema="public" catalog="libresources"/>
+        <attributes>
+            <id name="id">
+                <column name="id" length="32"/>
+            </id>
+            <basic name="sysid">
+                <column name="sysid" length="32"/>
+            </basic>
+            <basic name="localBase">
+                <column name="local_base" nullable="false" length="32"/>
+            </basic>
+            <basic name="html">
+                <column name="html" nullable="false"/>
+            </basic>
+            <basic name="marctype">
+                <column name="marctype" nullable="false" length="10"/>
+            </basic>
+            <basic name="cnmarc">
+                <column name="cnmarc" nullable="false"/>
+            </basic>
+            <basic name="marc21">
+                <column name="marc21" nullable="false"/>
+            </basic>
+            <basic name="rdf">
+                <column name="rdf" nullable="false"/>
+            </basic>
+            <basic name="xml">
+                <column name="xml" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="docRcno">
+                <column name="doc_rcno" nullable="false" length="50"/>
+            </basic>
+            <basic name="docFmt">
+                <column name="doc_fmt" nullable="false" length="10"/>
+            </basic>
+            <basic name="docProductBarcode">
+                <column name="doc_product_barcode" nullable="false" length="250"/>
+            </basic>
+            <basic name="docTitleProper">
+                <column name="doc_title_proper" nullable="false" length="1024"/>
+            </basic>
+            <basic name="docAuthor">
+                <column name="doc_author" nullable="false" length="1000"/>
+            </basic>
+            <basic name="docTranslator">
+                <column name="doc_translator" nullable="false" length="250"/>
+            </basic>
+            <basic name="docSubtitle">
+                <column name="doc_subtitle" nullable="false" length="1000"/>
+            </basic>
+            <basic name="docPublisher">
+                <column name="doc_publisher" nullable="false" length="250"/>
+            </basic>
+            <basic name="docSeriesTitle">
+                <column name="doc_series_title" nullable="false" length="250"/>
+            </basic>
+            <basic name="docSeriesAuthor">
+                <column name="doc_series_author" nullable="false" length="250"/>
+            </basic>
+            <basic name="docPubplace">
+                <column name="doc_pubplace" nullable="false" length="250"/>
+            </basic>
+            <basic name="docAttachment">
+                <column name="doc_attachment" nullable="false" length="250"/>
+            </basic>
+            <basic name="docClassno">
+                <column name="doc_classno" nullable="false" length="250"/>
+            </basic>
+            <basic name="docPubdate">
+                <column name="doc_pubdate" nullable="false" length="250"/>
+            </basic>
+            <basic name="docLanguage">
+                <column name="doc_language" nullable="false" length="250"/>
+            </basic>
+            <basic name="docPages">
+                <column name="doc_pages" nullable="false" length="250"/>
+            </basic>
+            <basic name="docPrice">
+                <column name="doc_price" nullable="false" length="250"/>
+            </basic>
+            <basic name="docIsbn">
+                <column name="doc_isbn" nullable="false" length="1000"/>
+            </basic>
+            <basic name="docIssn">
+                <column name="doc_issn" nullable="false" length="250"/>
+            </basic>
+            <basic name="docIsrc">
+                <column name="doc_isrc" nullable="false" length="250"/>
+            </basic>
+            <basic name="docOrderno">
+                <column name="doc_orderno" nullable="false" length="250"/>
+            </basic>
+            <basic name="docSize">
+                <column name="doc_size" nullable="false" length="250"/>
+            </basic>
+            <basic name="docUpno">
+                <column name="doc_upno" nullable="false" length="250"/>
+            </basic>
+            <basic name="docEdition">
+                <column name="doc_edition" nullable="false" length="250"/>
+            </basic>
+            <basic name="docCycle">
+                <column name="doc_cycle" nullable="false" length="250"/>
+            </basic>
+            <basic name="docWithnote">
+                <column name="doc_withnote" nullable="false" length="1000"/>
+            </basic>
+            <basic name="docDescriptor">
+                <column name="doc_descriptor" nullable="false" length="1000"/>
+            </basic>
+            <basic name="docSummaries">
+                <column name="doc_summaries" nullable="false"/>
+            </basic>
+            <basic name="docTitleProperPinyin">
+                <column name="doc_title_proper_pinyin" nullable="false" length="1024"/>
+            </basic>
+            <basic name="docAuthorPinyin">
+                <column name="doc_author_pinyin" nullable="false" length="1024"/>
+            </basic>
+            <basic name="docSectionName">
+                <column name="doc_section_name" nullable="false" length="1000"/>
+            </basic>
+            <basic name="isfinish">
+                <column name="isfinish" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="addedtime">
+                <column name="addedtime" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="isskip">
+                <column name="isskip" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="isdel">
+                <column name="isdel" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

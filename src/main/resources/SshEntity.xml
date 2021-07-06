@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.SshEntity">
+        <table name="ssh" schema="dbo"/>
+        <attributes>
+            <id name="ssh">
+                <column name="ssh" length="50"/>
+            </id>
+            <basic name="sshid">
+                <column name="sshid" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

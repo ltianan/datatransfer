@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.JhskEntity">
+        <table name="JHSK" schema="dbo"/>
+        <attributes>
+            <id name="jhskid">
+                <column name="jhskid" precision="-1"/>
+            </id>
+            <basic name="readercode">
+                <column name="readercode" nullable="false" length="20"/>
+            </basic>
+            <basic name="barcode">
+                <column name="barcode" nullable="false" length="20"/>
+            </basic>
+            <basic name="orderdate">
+                <column name="orderdate" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="yhdate">
+                <column name="yhdate" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="operater">
+                <column name="operater" nullable="false" length="20"/>
+            </basic>
+            <basic name="res">
+                <column name="res" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.MarcinfoEntity">
+        <table name="marcinfo" schema="public" catalog="sjlibold"/>
+        <attributes>
+            <id name="marcid">
+                <column name="marcid" length="32"/>
+            </id>
+            <basic name="marcnrong">
+                <column name="marcnrong"/>
+            </basic>
+            <basic name="marcxml">
+                <column name="marcxml" nullable="false"/>
+            </basic>
+            <basic name="ztai">
+                <column name="ztai" length="3"/>
+            </basic>
+            <basic name="fujian">
+                <column name="fujian" precision="-1"/>
+            </basic>
+            <basic name="leixing">
+                <column name="leixing" length="10"/>
+            </basic>
+            <basic name="flag">
+                <column name="flag" nullable="false" length="32"/>
+            </basic>
+            <basic name="fengmian">
+                <column name="fengmian" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="fengmianfile">
+                <column name="fengmianfile" nullable="false" length="250"/>
+            </basic>
+            <basic name="havefengmian">
+                <column name="havefengmian" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

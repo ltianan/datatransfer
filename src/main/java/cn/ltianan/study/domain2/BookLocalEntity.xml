@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain2.BookLocalEntity">
+        <table name="book_local" schema="public"/>
+        <attributes>
+            <id name="localId">
+                <column name="local_id" precision="-1"/>
+            </id>
+            <basic name="localCode">
+                <column name="local_code" length="64"/>
+            </basic>
+            <basic name="deptId">
+                <column name="dept_id" precision="-1"/>
+            </basic>
+            <basic name="localName">
+                <column name="local_name" length="128"/>
+            </basic>
+            <basic name="nano">
+                <column name="nano" nullable="false"/>
+            </basic>
+            <basic name="status">
+                <column name="status" nullable="false"/>
+            </basic>
+            <basic name="createBy">
+                <column name="create_by" nullable="false" length="64"/>
+            </basic>
+            <basic name="createTime">
+                <column name="create_time" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="updateBy">
+                <column name="update_by" nullable="false" length="64"/>
+            </basic>
+            <basic name="updateTime">
+                <column name="update_time" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.MarcshuceEntity">
+        <table name="marcshuce" schema="public" catalog="sjlibold"/>
+        <attributes>
+            <id name="shuceid">
+                <column name="shuceid" length="32"/>
+            </id>
+            <basic name="sshid">
+                <column name="sshid" length="32"/>
+            </basic>
+            <basic name="ydsmid">
+                <column name="ydsmid" nullable="false" length="32"/>
+            </basic>
+            <basic name="yssmid">
+                <column name="yssmid" nullable="false" length="32"/>
+            </basic>
+            <basic name="tiaoma">
+                <column name="tiaoma" length="100"/>
+            </basic>
+            <basic name="ztai">
+                <column name="ztai" length="10"/>
+            </basic>
+            <basic name="userid">
+                <column name="userid" length="32"/>
+            </basic>
+            <basic name="optime">
+                <column name="optime" precision="-1"/>
+            </basic>
+            <basic name="taojia">
+                <column name="taojia" precision="2"/>
+            </basic>
+            <basic name="cejia">
+                <column name="cejia" precision="2"/>
+            </basic>
+            <basic name="jzleixing">
+                <column name="jzleixing" nullable="false" length="100"/>
+            </basic>
+            <basic name="zdfangshi">
+                <column name="zdfangshi" nullable="false" length="100"/>
+            </basic>
+            <basic name="wxlyuan">
+                <column name="wxlyuan" nullable="false" length="100"/>
+            </basic>
+            <basic name="beizhu">
+                <column name="beizhu" nullable="false" length="200"/>
+            </basic>
+            <basic name="jcmshu">
+                <column name="jcmshu" nullable="false" length="100"/>
+            </basic>
+            <basic name="yjbshi">
+                <column name="yjbshi" nullable="false" length="50"/>
+            </basic>
+            <basic name="yjoptime">
+                <column name="yjoptime" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="qkyssmid">
+                <column name="qkyssmid" nullable="false" length="32"/>
+            </basic>
+            <basic name="zjcshu">
+                <column name="zjcshu" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.MarczdzchaoEntity">
+        <table name="marczdzchao" schema="public" catalog="sjlibold"/>
+        <attributes>
+            <id name="zdid">
+                <column name="zdid" length="32"/>
+            </id>
+            <basic name="cygid">
+                <column name="cygid" length="32"/>
+            </basic>
+            <basic name="flhao">
+                <column name="flhao" length="100"/>
+            </basic>
+            <basic name="zdzchao">
+                <column name="zdzchao" length="100"/>
+            </basic>
+            <basic name="optime">
+                <column name="optime" precision="-1"/>
+            </basic>
+            <basic name="userid">
+                <column name="userid" length="32"/>
+            </basic>
+            <basic name="leixing">
+                <column name="leixing" length="10"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain.DzkEntity">
+        <table name="DZK" schema="dbo"/>
+        <attributes>
+            <id name="readercode">
+                <column name="readercode" length="20"/>
+            </id>
+            <basic name="name">
+                <column name="name" nullable="false" length="20"/>
+            </basic>
+            <basic name="sex">
+                <column name="sex" nullable="false" length="2"/>
+            </basic>
+            <basic name="readerclass">
+                <column name="readerclass" nullable="false" length="20"/>
+            </basic>
+            <basic name="readunit">
+                <column name="readunit" nullable="false" length="50"/>
+            </basic>
+            <basic name="bookcount">
+                <column name="bookcount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="daycount">
+                <column name="daycount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="orderbook">
+                <column name="orderbook" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="ordercount">
+                <column name="ordercount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="orderday">
+                <column name="orderday" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="yordercshu">
+                <column name="yordercshu" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="acount">
+                <column name="Acount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="bcount">
+                <column name="Bcount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="yAcount">
+                <column name="yAcount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="yBcount">
+                <column name="yBcount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="recount">
+                <column name="recount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="reday">
+                <column name="reday" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="yrecount">
+                <column name="yrecount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="ifcanre">
+                <column name="ifcanre" precision="-1"/>
+            </basic>
+            <basic name="fine">
+                <column name="fine" nullable="false" precision="2"/>
+            </basic>
+            <basic name="defile">
+                <column name="defile" nullable="false" precision="2"/>
+            </basic>
+            <basic name="lost">
+                <column name="lost" nullable="false" precision="2"/>
+            </basic>
+            <basic name="wuzheng">
+                <column name="wuzheng" precision="-1"/>
+            </basic>
+            <basic name="readstatus">
+                <column name="readstatus" nullable="false" length="10"/>
+            </basic>
+            <basic name="term">
+                <column name="term" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="paperdate">
+                <column name="paperdate" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="photo">
+                <column name="photo" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="yycount">
+                <column name="yycount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="memo">
+                <column name="memo" nullable="false" length="100"/>
+            </basic>
+            <basic name="eDate">
+                <column name="eDate" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="gkcount">
+                <column name="gkcount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="gkdaycount">
+                <column name="gkdaycount" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="gkorderbook">
+                <column name="gkorderbook" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

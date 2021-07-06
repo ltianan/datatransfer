@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain2.CirReaderEntity">
+        <table name="cir_reader" schema="public"/>
+        <attributes>
+            <id name="readerId">
+                <column name="reader_id" precision="-1"/>
+            </id>
+            <basic name="readerNo">
+                <column name="reader_no" length="100"/>
+            </basic>
+            <basic name="readerName">
+                <column name="reader_name" length="30"/>
+            </basic>
+            <basic name="readerPassword">
+                <column name="reader_password" nullable="false" length="64"/>
+            </basic>
+            <basic name="deptId">
+                <column name="dept_id" precision="-1"/>
+            </basic>
+            <basic name="readerUnitId">
+                <column name="reader_unit_id" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="readerTypeId">
+                <column name="reader_type_id" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="tel">
+                <column name="tel" nullable="false" length="30"/>
+            </basic>
+            <basic name="mobile">
+                <column name="mobile" nullable="false" length="20"/>
+            </basic>
+            <basic name="email">
+                <column name="email" nullable="false"/>
+            </basic>
+            <basic name="address">
+                <column name="address" nullable="false"/>
+            </basic>
+            <basic name="deposit">
+                <column name="deposit" precision="2"/>
+            </basic>
+            <basic name="debt">
+                <column name="debt" precision="2"/>
+            </basic>
+            <basic name="nation">
+                <column name="nation" nullable="false" length="20"/>
+            </basic>
+            <basic name="birthday">
+                <column name="birthday" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="birthplace">
+                <column name="birthplace" nullable="false" length="50"/>
+            </basic>
+            <basic name="startDate">
+                <column name="start_date" precision="-1"/>
+            </basic>
+            <basic name="expireDate">
+                <column name="expire_date" precision="-1"/>
+            </basic>
+            <basic name="stoppedDate">
+                <column name="stopped_date" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="sex">
+                <column name="sex" nullable="false"/>
+            </basic>
+            <basic name="idcard">
+                <column name="idcard" nullable="false" length="18"/>
+            </basic>
+            <basic name="readercardNo">
+                <column name="readercard_no" nullable="false" length="32"/>
+            </basic>
+            <basic name="studentNo">
+                <column name="student_no" nullable="false" length="32"/>
+            </basic>
+            <basic name="readerStatus">
+                <column name="reader_status" nullable="false"/>
+            </basic>
+            <basic name="openid">
+                <column name="openid" nullable="false" length="64"/>
+            </basic>
+            <basic name="readerAvatar">
+                <column name="reader_avatar" nullable="false" length="100"/>
+            </basic>
+            <basic name="createBy">
+                <column name="create_by" nullable="false" length="64"/>
+            </basic>
+            <basic name="createTime">
+                <column name="create_time" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="updateBy">
+                <column name="update_by" nullable="false" length="64"/>
+            </basic>
+            <basic name="updateTime">
+                <column name="update_time" nullable="false" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

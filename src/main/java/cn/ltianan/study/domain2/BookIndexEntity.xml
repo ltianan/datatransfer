@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="cn.ltianan.study.domain2.BookIndexEntity">
+        <table name="book_index" schema="public"/>
+        <attributes>
+            <id name="indexId">
+                <column name="index_id" precision="-1"/>
+            </id>
+            <basic name="bibId">
+                <column name="bib_id" precision="-1"/>
+            </basic>
+            <basic name="deptId">
+                <column name="dept_id" precision="-1"/>
+            </basic>
+            <basic name="callNo">
+                <column name="call_no" length="100"/>
+            </basic>
+            <basic name="classNo">
+                <column name="class_no" nullable="false" length="100"/>
+            </basic>
+            <basic name="orderNo">
+                <column name="order_no" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="bookNum">
+                <column name="book_num" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="authorNo">
+                <column name="author_no" nullable="false" length="100"/>
+            </basic>
+            <basic name="marcid">
+                <column name="marcid" nullable="false"/>
+            </basic>
+            <basic name="sshid">
+                <column name="sshid" nullable="false"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
