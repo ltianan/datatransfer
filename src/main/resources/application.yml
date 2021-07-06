@@ -3,14 +3,14 @@ spring:
   primary:
     datasource:
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=libdata_2017
+      url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=nhqdbrmyy
       username: sa
       password: sa1
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   secondary:
     datasource:
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:postgresql://127.0.0.1:5432/pyzyy
+      url: jdbc:postgresql://127.0.0.1:5432/nhqdbrmyy
       username: postgres
       password: 1
       driver-class-name: org.postgresql.Driver
